@@ -1,0 +1,63 @@
+{
+  "module": "Deals",
+  "layout_id": "YOUR_LAYOUT_ID",
+  "allow_multiselectlookup": false,
+  "sections": [
+    {
+      "name": "Contract Details",
+      "fields": [
+        { "field_label": "Contract Number", "data_type": "text", "length": 50 },
+        { "field_label": "Contract Start Date", "data_type": "date" },
+        { "field_label": "Contract End Date", "data_type": "date" },
+        { "field_label": "Contract Type", "data_type": "picklist",
+          "pick_list_values": [
+            { "display_value": "Monthly", "actual_value": "Monthly" },
+            { "display_value": "Quarterly", "actual_value": "Quarterly" },
+            { "display_value": "Annual", "actual_value": "Annual" },
+            { "display_value": "One-time", "actual_value": "One-time" }
+          ]
+        },
+        { "field_label": "Auto Renew", "data_type": "boolean" },
+        { "field_label": "Contract Value", "data_type": "currency", "length": 16, "decimal_place": 2 },
+        { "field_label": "Contract Notes", "data_type": "textarea", "textarea": { "type": "large" } }
+      ]
+    },
+    {
+      "name": "Shipping Info",
+      "fields": [
+        { "field_label": "Primary Warehouse", "data_type": "picklist",
+          "pick_list_values": [
+            { "display_value": "McAllen", "actual_value": "McAllen" },
+            { "display_value": "Laredo", "actual_value": "Laredo" },
+            { "display_value": "Houston", "actual_value": "Houston" },
+            { "display_value": "Dallas", "actual_value": "Dallas" }
+          ]
+        },
+        { "field_label": "Shipping Regions", "data_type": "multiselectpicklist",
+          "pick_list_values": [
+            { "display_value": "North", "actual_value": "North" },
+            { "display_value": "South", "actual_value": "South" },
+            { "display_value": "East", "actual_value": "East" },
+            { "display_value": "West", "actual_value": "West" },
+            { "display_value": "Mexico", "actual_value": "Mexico" }
+          ]
+        },
+        { "field_label": "Estimated Monthly Shipments", "data_type": "integer", "length": 9 },
+        { "field_label": "Average Weight per Shipment", "data_type": "double", "length": 16, "decimal_place": 2 },
+        { "field_label": "Operations Contact", "data_type": "lookup",
+          "lookup": { "module": { "api_name": "Contacts" }, "display_label": "Operations Deals" }
+        },
+        { "field_label": "Account Manager", "data_type": "userlookup" },
+        { "field_label": "Dispatch Email", "data_type": "email" },
+        { "field_label": "Dispatch Phone", "data_type": "phone" },
+        { "field_label": "Tracking Portal", "data_type": "website" }
+      ]
+    },
+    {
+      "name": "Financials",
+      "fields": [
+        { "field_label": "Discount Rate", "data_type": "percent" }
+      ]
+    }
+  ]
+}
