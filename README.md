@@ -61,6 +61,3 @@ A client sends a document (Excel, Word, PDF, screenshot). A prompt converts it i
 
 Each field uses the structure from the [Zoho CRM API v8 create custom field documentation](https://www.zoho.com/crm/developer/docs/api/v8/create-custom-field.html). See `example_fields.json` for a full example.
 
-## Notes
-
-This is a first version. Run it in a sandbox first and check the log before using it on a client's production org.
